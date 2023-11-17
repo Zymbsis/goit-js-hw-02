@@ -1,9 +1,15 @@
 function checkForSpam(message) {
-  return (
-    message.toLowerCase().includes("spam") ||
-    message.toLowerCase().includes("sale")
-  );
+  return message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale");
 }
+
+//? Or
+// function checkForSpam(message) {
+//   if (message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale")) {
+//     return !false;
+//   } else {
+//     return !true;
+//   }
+// }
 
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
